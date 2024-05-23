@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background-color: lightslategray;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.logo2, 
+.cont b, .firstsection h1, 
+.firstsection p, .firstsection a, 
+.background, .mini-container h1, 
+.mini-container p, .mini-container, 
+.img, .contents {
+    animation: slideFromBottom 1s ease-out;
+}
+
+.info, .text h1, .box-container {
+    animation: slideFromLeft 1s ease-out;
+}
